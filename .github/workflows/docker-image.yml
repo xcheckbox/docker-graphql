@@ -45,7 +45,7 @@ jobs:
       env:
          NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t purhedev/docker-graphql:$NEW_VERSION
+        docker push purhedev/docker-graphql:$NEW_VERSION
         docker push purhedev/docker-graphql:latest
     
     # - name: Build the Docker image
